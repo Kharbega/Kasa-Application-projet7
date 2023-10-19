@@ -1,0 +1,24 @@
+@import "./index.css";
+@import "../styles/components/logo.css"
+
+
+
+
+
+
+;
+
+body {
+
+  width: 1440px;
+  height: 1024px;
+  top: -183px;
+  left: -543px;
+  padding: 40px, 100px, 0px, 100px;
+  font-family: 'Montserrat', sans-serif;
+  color: #FF6060;
+
+
+}
+
+;
