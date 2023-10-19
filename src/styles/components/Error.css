@@ -1,0 +1,35 @@
+.Errorpage-content {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.Text-404 {
+    font-family: Montserrat;
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 411px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0;
+
+
+}
+
+
+
+;
+
+h3.Text-H3 {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 100px;
+
+
+}
