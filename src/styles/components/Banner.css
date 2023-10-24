@@ -1,0 +1,28 @@
+.Text-banner {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    z-index: 1;
+
+    ;
+
+}
+
+.Text-banner-content {
+    width: 1240px;
+    height: 223px;
+    top: 171px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/src/assets/fonts/img/IMG.png);
+
+    border-radius: 25px;
+    background-position: center;
+
+}

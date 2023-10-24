@@ -1,0 +1,15 @@
+ul {
+    display: flex;
+}
+
+a {
+    padding-right: 60px;
+    text-decoration: none;
+    color: #FF6060;
+
+
+}
+
+li {
+    list-style: none;
+}
