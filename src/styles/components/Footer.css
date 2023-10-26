@@ -1,0 +1,29 @@
+.footer-content {
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.text-content-footer {
+    color: white;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+#root>div.footer-content>div.logo>img {
+    width: 122px;
+    height: 39.44px;
+    top: 66px;
+    left: 659px;
+    position: relative;
+
+    color: white;
+}

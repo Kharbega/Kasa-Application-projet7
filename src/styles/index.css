@@ -3,8 +3,11 @@
 @import "../styles/components/Error.css";
 @import "../styles/components/Banner.css";
 @import "../styles/components/Navigation.css";
-@import "../styles/components/Card.css"
+@import "../styles/components/Card.css";
+@import "../styles/components/Footer.css"
 
+;
+@import "../styles/components/FicheLogement.css"
 
 
 
@@ -22,7 +25,8 @@ body {
   height: 1024px;
   top: -183px;
   left: -543px;
-  padding: 40px, 100px, 0px, 100px
+  padding: 40px, 100px, 0px, 100px;
+
 }
 
 ;

@@ -18,12 +18,9 @@ const Card = () => {
 
                 return (
 
-
-
-
-
                     < div className="card-models" key={id} >
-                        <Link to={{ pathname: "/Logement", search: "?_id=" + id }}>
+
+                        <Link to={{ pathname: "/FicheLogement", search: "?_id=" + id }}>
                             <img src={cover} alt='' />
                             <div className='card-title'>
                                 <h4>{title}</h4>
@@ -39,6 +36,6 @@ const Card = () => {
 
 
     )
-};
 
+}
 export default Card;
