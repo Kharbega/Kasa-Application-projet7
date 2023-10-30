@@ -1,57 +1,83 @@
 import React, { useState } from 'react';
 import logements from '../Data/logements.json';
 import { Carousel } from 'react-responsive-carousel';
-
+import Footer from './Footer';
 
 const FicheLogement = () => {
 
     /* const ArrayLogement = [];
-  
-      {
-          logements.map((logement) => {
-  
-  
-              const [CurrentLogement] = useState(logement);
-  
-              console.log(logement)
-              console.log(ArrayLogement)*/
+ 
+     const [searchParams] = searchParams(any);
+     const [idLogement] = useState(searchParams.get('_id'));
+ 
+     // cherche l'id dans le fichier logements.json
+     const Fichelogement = logements.find(element => element.id === idLogement)
+ 
+     if (!Fichelogement) return (<Error />)
+     console.log(idLogement)
+     console.log(idLogement)*/
+
 
     return (
 
 
-        <div className='Card-logement'>
+        <><section className='Card-logement'>
             <Carousel>
-                <img src='src/assets/fonts/img/Carrousel.png' alt='img' />
+                <img src='public/Carrousel.png' />
                 <img src='src/assets/fonts/img/Carrousel.png' />
                 <img src='src/assets/fonts/img/Carrousel.png' />
             </Carousel>
             <div className="logement-title">
-                <h1>title logement</h1>
+                <h1>Cosy lot on the Canal Saint-Martin</h1>
             </div>
             <div className="logement-location">
-                <p>lieu </p>
+                <p>Paris, Île-de-France</p>
             </div>
             <div className="logement-tags">
                 <ul>
-                    <li>tags</li>
-                </ul>
-            </div>
-            <div className="logement-host">
-                <h2 className='name'>Name</h2>
-                <img src="" alt="img" />
-            </div>
-            <div className="logement-tags">
-                <li>etoile</li>
-            </div>
-            <div className="logement-description">
-                <p>description</p>
-            </div>
-            <div className="logement-equipement">
-                <ul>
-                    <li>equipement</li>
+                    <li>Cozy</li>
+                    <li>Canal</li>
+                    <li>Paris 10</li>
                 </ul>
             </div>
 
+            <section className='host-star'>
+                <div className="logement-host">
+                    <div className="div-name">
+                        <p className='name'>Alexandre <br />Dumas</p>
+                    </div>
+
+                    <span className='div-img'>
+                        <img src="" alt="" />
+                    </span>
+
+                </div>
+                <div className="logement-star-rating">
+                    <li>etoile</li>
+                </div>
+            </section>
+
+
+            <section className='description-equipement'>
+
+                <div className="logement-description">
+                    <h4>Description</h4>
+                    <p>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). </p>
+                </div>
+                <div className="logement-equipement">
+                    <h4>Equipements</h4>
+                    <ul>
+                        <li>Climatisation</li>
+                        <li>Wi-fi</li>
+                        <li>Cuisine</li>
+                        <li>Espace de travail</li>
+                        <li>Fer a repasser</li>
+                        <li>Seche-cheveux</li>
+                        <li>Cintres</li>
+                    </ul>
+                </div>
+
+            </section>
 
 
 
@@ -62,7 +88,7 @@ const FicheLogement = () => {
 
 
 
-        </div>
+        </section><Footer /></>
     )
 
 
