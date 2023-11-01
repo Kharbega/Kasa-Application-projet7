@@ -22,43 +22,42 @@ const FicheLogement = () => {
 
 
         <><section className='Card-logement'>
-            <Carousel>
-                <img src='public/Carrousel.png' />
-                <img src='src/assets/fonts/img/Carrousel.png' />
-                <img src='src/assets/fonts/img/Carrousel.png' />
-            </Carousel>
-            <div className="logement-title">
-                <h1>Cosy lot on the Canal Saint-Martin</h1>
-            </div>
-            <div className="logement-location">
-                <p>Paris, Île-de-France</p>
-            </div>
-            <div className="logement-tags">
-                <ul>
-                    <li>Cozy</li>
-                    <li>Canal</li>
-                    <li>Paris 10</li>
-                </ul>
-            </div>
-
-            <section className='host-star'>
-                <div className="logement-host">
-                    <div className="div-name">
-                        <p className='name'>Alexandre <br />Dumas</p>
+            <div className='group-main'>
+                <div className="location-tag">
+                    <div className="logement-title">
+                        <h1>Cosy lot on the Canal Saint-Martin</h1>
                     </div>
-
-                    <span className='div-img'>
-                        <img src="" alt="" />
-                    </span>
-
+                    <div className="logement-location">
+                        <p>Paris, Île-de-France</p>
+                    </div>
+                    <div className="logement-tags">
+                        <ul>
+                            <li>Cozy</li>
+                            <li>Canal</li>
+                            <li>Paris 10</li>
+                        </ul>
+                    </div>
                 </div>
-                <div className="logement-star-rating">
-                    <li>etoile</li>
+
+                <div className='host-star'>
+                    <div className="logement-host">
+                        <div className="div-name">
+                            <p className='name'>Alexandre <br />Dumas</p>
+                        </div>
+
+                        <span className='div-img'>
+                            <img src="" alt="" />
+                        </span>
+
+                    </div>
+                    <div className="logement-star-rating">
+                        <li>etoile</li>
+                    </div>
                 </div>
-            </section>
+            </div>
 
 
-            <section className='description-equipement'>
+            <div className='description-equipement'>
 
                 <div className="logement-description">
                     <h4>Description</h4>
@@ -77,7 +76,7 @@ const FicheLogement = () => {
                     </ul>
                 </div>
 
-            </section>
+            </div>
 
 
 

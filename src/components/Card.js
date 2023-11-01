@@ -22,9 +22,8 @@ const Card = () => {
 
                         <Link to={{ pathname: "/FicheLogement", search: "?_id=" + id }}>
                             <img src={cover} alt='' />
-                            <div className='card-title'>
-                                <h4>{title}</h4>
-                            </div>
+                            <h4 >{title}</h4>
+
                         </Link>
                     </div>
                 )
