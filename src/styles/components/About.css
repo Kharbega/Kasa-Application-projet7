@@ -18,3 +18,16 @@
     padding-inline: 5%;
     margin: 0;
 }
+
+.title-chevron {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+
+}
+
+.elementChevronUp {
+    color: white;
+    padding-right: 3%;
+}
