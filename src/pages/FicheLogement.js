@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logements from '../Data/logements.json';
 import { Carousel } from 'react-responsive-carousel';
 import Footer from './Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const FicheLogement = () => {
 

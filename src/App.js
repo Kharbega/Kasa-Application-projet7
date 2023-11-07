@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Error from './pages/Error';
 import FicheLogement from './pages/FicheLogement';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
