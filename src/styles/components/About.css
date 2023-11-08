@@ -1,33 +1,3 @@
-/*.logement-panel-about {
-    width: 100%;
-    height: 249px;
-    border-radius: 10px;
-    background-color: #F6F6F6;
-
-
-
+.group-panel-about {
+    padding-top: 4%;
 }
-
-.logement-panel-about>.group-title-chevron>h4 {
-    display: flex;
-    align-items: center;
-    height: 52px;
-    border-radius: 10px;
-    background-color: #ff6060;
-    bottom: 0;
-    padding-inline: 5%;
-    margin: 0;
-}
-
-.group-title-chevron {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff6060;
-
-}
-
-.elementChevronUp {
-    color: white;
-    padding-right: 3%;
-}*/

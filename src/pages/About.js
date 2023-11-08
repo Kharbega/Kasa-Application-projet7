@@ -22,11 +22,13 @@ const About = () => {
             <Logo />
         </div>
             <Banner />
-            <div>
+
+            <div className='group-panel-about'>
                 <LogementPanel title="Fiabilité" content={fiabilité} />
                 <LogementPanel title="Respect" content={respect} />
                 <LogementPanel title="Services" content={services} />
                 <LogementPanel title="Sécurité" content={sécurité} />
+
             </div></>
     );
 };

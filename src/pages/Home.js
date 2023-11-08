@@ -16,7 +16,7 @@ const Home = () => {
                 <Logo />
             </div>
 
-            <Banner />
+            <Banner title="Chez vous, partout et ailleurs" />
         </div><Card /></><Footer /></>
 
 

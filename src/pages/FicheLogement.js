@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LogementPanel from '../components/LogementPanel';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
+import LocationTag from '../components/LocationTag';
+import LogementHostStar from '../components/LogementHostStar';
 
 
 const FicheLogement = () => {
@@ -34,37 +36,9 @@ const FicheLogement = () => {
 
             <section className='Card-logement'>
                 <div className='group-main'>
-                    <div className="location-tag">
-                        <div className="logement-title">
-                            <h1>Cosy lot on the Canal Saint-Martin</h1>
-                        </div>
-                        <div className="logement-location">
-                            <p>Paris, Île-de-France</p>
-                        </div>
-                        <div className="logement-tags">
-                            <ul>
-                                <li>Cozy</li>
-                                <li>Canal</li>
-                                <li>Paris 10</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <LocationTag />
 
-                    <div className='host-star'>
-                        <div className="logement-host">
-                            <div className="div-name">
-                                <p className='name'>Alexandre <br />Dumas</p>
-                            </div>
-
-                            <span className='div-img'>
-                                <img src="" alt="" />
-                            </span>
-
-                        </div>
-                        <div className="logement-star-rating">
-                            <li>etoile</li>
-                        </div>
-                    </div>
+                    <LogementHostStar />
                 </div>
 
 
@@ -74,15 +48,6 @@ const FicheLogement = () => {
                     <LogementPanel title="Equipements" />
 
                 </div>
-
-
-
-
-
-
-
-
-
 
             </section><Footer /></>
     )
