@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import logements from '../Data/logements.json';
-import { Carousel } from 'react-responsive-carousel';
+import Caroussel from '../components/Caroussel';
 import Footer from './Footer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LogementPanel from '../components/LogementPanel';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
@@ -33,6 +32,7 @@ const FicheLogement = () => {
                 <Navigation />
                 <Logo />
             </div>
+            <Caroussel />
 
             <section className='Card-logement'>
                 <div className='group-main'>

@@ -37,8 +37,7 @@ p.name {
 .host-star {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-
+    justify-content: center;
 }
 
 #root>section>div.group-main>div.location-tag>div.logement-tags>ul>li {
@@ -130,6 +129,12 @@ p.name {
 }
 
 .group-main {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logement-star-rating {
     display: flex;
     justify-content: space-between;
 

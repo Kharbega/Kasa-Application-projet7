@@ -1,5 +1,12 @@
-<Carousel>
-    <img src='public/Carrousel.png' />
-    <img src='src/assets/fonts/img/Carrousel.png' />
-    <img src='src/assets/fonts/img/Carrousel.png' />
-</Carousel>
+import React from 'react';
+
+const Caroussel = () => {
+    return (
+
+        <h1>carrousel</h1>
+    );
+};
+
+export default Caroussel;
+
+
