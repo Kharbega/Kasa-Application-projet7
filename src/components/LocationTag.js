@@ -1,14 +1,18 @@
+/*
 import React from 'react';
+import logements from '../Data/logements.json'
 
 
 const LocationTag = () => {
+
+
     return (
         <div className="location-tag">
             <div className="logement-title">
-                <h1>Cosy lot on the Canal Saint-Martin</h1>
+                <h1>{ProfileLogement.title}</h1>
             </div>
             <div className="logement-location">
-                <p>Paris, Île-de-France</p>
+                <p>{ProfileLogement.location}</p>
             </div>
             <div className="logement-tags">
                 <ul>
@@ -20,5 +24,6 @@ const LocationTag = () => {
         </div>
     );
 };
-
-export default LocationTag;
+console.log(ProfileLogement.location)
+console.log(ProfileLogement)
+export default LocationTag;*/

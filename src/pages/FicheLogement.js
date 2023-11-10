@@ -7,7 +7,12 @@ import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import LocationTag from '../components/LocationTag';
 import LogementHostStar from '../components/LogementHostStar';
-import { useSearchParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { useSearchParams } from 'react-router-dom'; import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+const stars = <FontAwesomeIcon icon={faStar} size="xl" />
+
 
 
 const FicheLogement = () => {
@@ -15,17 +20,7 @@ const FicheLogement = () => {
 
 
 
-    /* const ArrayLogement = [];
- 
-     const [searchParams] = searchParams(any);
-     const [idLogement] = useState(searchParams.get('_id'));
- 
-     // cherche l'id dans le fichier logements.json
-     const Fichelogement = logements.find(element => element.id === idLogement)
- 
-     if (!Fichelogement) return (<Error />)
-     console.log(idLogement)
-     console.log(idLogement)*/
+
 
     const [CurrentLogement] = useState(logements);
 
@@ -48,16 +43,52 @@ const FicheLogement = () => {
 
             <section className='Card-logement'>
                 <div className='group-main'>
-                    <LocationTag />
+                    <div className="location-tag">
+                        <div className="logement-title">
+                            <h1>{ProfileLogement.title}</h1>
+                        </div>
+                        <div className="logement-location">
+                            <p>{ProfileLogement.location}</p>
+                        </div>
+                        <div className="logement-tags">
 
-                    <LogementHostStar />
+                            <ul >
+                                {ProfileLogement.tags.map((tags, index) => {
+                                    return <li key={tags & index}>{tags}</li>
+                                })
+                                }
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div className='host-star'>
+                        <div className="logement-host">
+                            <div className="div-name">
+                                <p className='name'>{ProfileLogement.host.name}</p>
+                            </div>
+
+                            <span className='div-img'>
+                                <img src={ProfileLogement.host.picture} alt="" />
+                            </span>
+
+                        </div>
+                        <div className="logement-star-rating">
+                            <li>{stars}</li>
+                            <li>{stars}</li>
+                            <li>{stars}</li>
+                            <li>{stars}</li>
+                            <li>{stars}</li>
+                        </div>
+                    </div>
                 </div>
 
 
                 <div className='description-equipement'>
 
                     <LogementPanel title="Descriptions" content={ProfileLogement.description} />
-                    <LogementPanel title="Equipements" />
+                    <LogementPanel title="Equipements" content={ProfileLogement.equipments} />
 
                 </div>
 
