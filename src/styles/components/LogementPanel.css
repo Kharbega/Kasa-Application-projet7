@@ -36,3 +36,11 @@
     border-radius: 10px;
 
 }
+
+.visible {
+    display: contents;
+}
+
+.hidden {
+    display: none;
+}
