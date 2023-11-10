@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-
+import logements from '../Data/logements.json';
 const elementChevronUp = <FontAwesomeIcon icon={faChevronUp} />
 const elementChevronDown = <FontAwesomeIcon icon={faChevronDown} />
 
@@ -18,6 +18,8 @@ const LogementPanel = (props) => {
     const ReverseContentTitle = () => { SetCollapseOpen(!CollapseOpen) }
 
     /*  */
+    // const [CurrentLogement] = useState(logements);
+
 
 
 

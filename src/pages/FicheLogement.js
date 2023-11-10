@@ -7,9 +7,13 @@ import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import LocationTag from '../components/LocationTag';
 import LogementHostStar from '../components/LogementHostStar';
+import { useSearchParams } from 'react-router-dom';
 
 
 const FicheLogement = () => {
+
+
+
 
     /* const ArrayLogement = [];
  
@@ -23,6 +27,14 @@ const FicheLogement = () => {
      console.log(idLogement)
      console.log(idLogement)*/
 
+    const [CurrentLogement] = useState(logements);
+
+    const [urlSearch] = useSearchParams()
+    const [IdFicheLogement] = useState(urlSearch.get('_id'))
+    console.log(IdFicheLogement);
+
+    let ProfileLogement = logements.find((item) => item.id = IdFicheLogement);
+    console.log(ProfileLogement)
 
     return (
 
@@ -44,7 +56,7 @@ const FicheLogement = () => {
 
                 <div className='description-equipement'>
 
-                    <LogementPanel title="Descriptions" />
+                    <LogementPanel title="Descriptions" content={ProfileLogement.description} />
                     <LogementPanel title="Equipements" />
 
                 </div>
