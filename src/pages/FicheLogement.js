@@ -1,35 +1,29 @@
 import React, { useState } from 'react';
 import logements from '../Data/logements.json';
-import Caroussel from '../components/Caroussel';
 import Footer from './Footer';
 import LogementPanel from '../components/LogementPanel';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
-import LocationTag from '../components/LocationTag';
-import LogementHostStar from '../components/LogementHostStar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useSearchParams } from 'react-router-dom'; import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Slideshow from '../components/Slideshow';
 
 const stars = <FontAwesomeIcon icon={faStar} size="xl" />
+
 
 
 
 const FicheLogement = () => {
 
 
-
-
-
-
-    const [CurrentLogement] = useState(logements);
+    const [] = useState(logements);
 
     const [urlSearch] = useSearchParams()
     const [IdFicheLogement] = useState(urlSearch.get('_id'))
     console.log(IdFicheLogement);
 
-    let ProfileLogement = logements.find((item) => item.id = IdFicheLogement);
-    console.log(ProfileLogement)
+    let ProfileLogement = logements.find(item => item.id = IdFicheLogement);
 
     return (
 
@@ -39,13 +33,19 @@ const FicheLogement = () => {
                 <Navigation />
                 <Logo />
             </div>
-            <Caroussel />
 
-            <section className='Card-logement'>
+            <Slideshow picture={ProfileLogement.pictures.map((pictures, index) => {
+                return <img key={pictures & index} src={pictures} />
+            })
+            }
+            />
+
+
+            <section className='Card-logement ' key={IdFicheLogement}>
                 <div className='group-main'>
                     <div className="location-tag">
                         <div className="logement-title">
-                            <h1>{ProfileLogement.title}</h1>
+                            <h1 >{ProfileLogement.title} </h1>
                         </div>
                         <div className="logement-location">
                             <p>{ProfileLogement.location}</p>

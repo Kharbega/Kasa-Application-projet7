@@ -1,0 +1,10 @@
+.Chevron-carrousel {
+    width: 98px;
+    height: 120px;
+    color: black;
+}
+
+.group-slideshow {
+    display: flex;
+    justify-content: space-between;
+}
