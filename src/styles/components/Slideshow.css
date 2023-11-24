@@ -34,3 +34,10 @@ div.group-slideshow>div>div>ul>img {
 div.group-slideshow>div>div>ul>img.show {
     display: flex;
 }
+
+.numberIndexPicture {
+    top: 87%;
+    position: absolute;
+    left: 48%;
+    color: white;
+}

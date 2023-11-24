@@ -615,5 +615,10 @@
 			"Marais",
 			"Rivoli"
 		]
+	},
+	{
+		"id": "cb02d69b",
+		"title": "Annonces Appartements",
+		"cover": "public/logo.svg"
 	}
 ]

@@ -7,22 +7,29 @@
     text-align: left;
     color: #fff;
     z-index: 1;
-
-    ;
+    position: absolute;
 
 }
 
-.Text-banner-content {
-    width: 1206px;
+.group-img-text {
     height: 223px;
-    top: 171px;
-    left: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+}
+
+.img-banner-background {
     background-image: url(/src/assets/fonts/img/IMG.png);
-
-    border-radius: 25px;
     background-position: center;
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.8);
 
+}
+
+.img-banner-background.banner-home {
+    filter: brightness(0.7);
 }

@@ -13,7 +13,7 @@ const Slideshow = (props) => {
 
                 <div className="picture-slideshow">
                     <ul>{props.picture}</ul>
-                    <p>{props.number}</p>
+                    <p className='numberIndexPicture'>{props.number}</p>
                 </div>
 
 

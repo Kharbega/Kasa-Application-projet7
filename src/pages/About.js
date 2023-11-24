@@ -21,7 +21,7 @@ const About = () => {
             <Navigation />
             <Logo />
         </div>
-            <Banner />
+            <Banner img="public/logo.svg" />
 
             <div className='group-panel-about'>
                 <LogementPanel title="Fiabilité" content={fiabilité} />
