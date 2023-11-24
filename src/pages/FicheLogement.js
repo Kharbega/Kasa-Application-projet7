@@ -13,7 +13,6 @@ const stars = <FontAwesomeIcon icon={faStar} size="xl" />
 
 
 
-
 const FicheLogement = () => {
 
 
@@ -25,6 +24,10 @@ const FicheLogement = () => {
 
     let ProfileLogement = logements.find(item => item.id = IdFicheLogement);
 
+    const [CurrentPicture, setCurrentPicture] = useState(0)
+
+    const ShowPicture = (index) => { if (index === CurrentPicture) return "show" }
+
     return (
 
 
@@ -35,9 +38,12 @@ const FicheLogement = () => {
             </div>
 
             <Slideshow picture={ProfileLogement.pictures.map((pictures, index) => {
-                return <img key={pictures & index} src={pictures} />
+                return <img key={pictures & index} src={pictures} className={ShowPicture(index)} />
             })
             }
+
+
+                number={`${CurrentPicture + 1}/${ProfileLogement.pictures.length}`}
             />
 
 
