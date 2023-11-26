@@ -9,42 +9,69 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSearchParams } from 'react-router-dom'; import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Slideshow from '../components/Slideshow';
 
-const stars = <FontAwesomeIcon icon={faStar} size="xl" />
-
+const stars = [<FontAwesomeIcon icon={faStar} size="xl" />]
+const NumberRating = parseInt(ProfileLogement.rating)
+const starArray = [1, 2, 3, 3, 4, 5]
+console.log(stars)
 
 
 const FicheLogement = () => {
 
 
-    const [] = useState(logements);
+    //   const [] = useState(logements);
 
     const [urlSearch] = useSearchParams()
     const [IdFicheLogement] = useState(urlSearch.get('_id'))
     console.log(IdFicheLogement);
 
-    let ProfileLogement = logements.find(item => item.id = IdFicheLogement);
+    let ProfileLogement = logements.find(item => item.id === IdFicheLogement);
 
     const [CurrentPicture, setCurrentPicture] = useState(0)
+    const TotalLengthPicture = ProfileLogement.pictures.length - 1;
+    const NumberPicture = CurrentPicture - 1;
+
 
     const ShowPicture = (index) => { if (index === CurrentPicture) return "show" }
+    const clickleftPicture = () => {
+        if (NumberPicture < 0) { setCurrentPicture(TotalLengthPicture) }
+        else {
+            setCurrentPicture(CurrentPicture - 1)
+        }
+
+    }
+
+    const clickrighttPicture = () => {
+        // if (NumberPicture > TotalLengthPicture) { setCurrentPicture(0) }
+        // else {
+        setCurrentPicture((CurrentPicture + 1) % ProfileLogement.pictures.length)
+    }
+
+
+    //}
+    //quand on clique sur le btn left , img suivant 
 
     return (
 
 
         <>
-            <div className="logo-nav">
+            <div className="logo-nav LogoFicheLogement">
                 <Navigation />
                 <Logo />
             </div>
 
-            <Slideshow picture={ProfileLogement.pictures.map((pictures, index) => {
-                return <img key={pictures & index} src={pictures} className={ShowPicture(index)} />
-            })
-            }
+            <Slideshow picture=
 
+                {ProfileLogement.pictures.map((pictures, index) => {
+                    return <img key={pictures & index} src={pictures} className={ShowPicture(index)} />
 
+                })
+                }
                 number={`${CurrentPicture + 1}/${ProfileLogement.pictures.length}`}
+                clickright={clickrighttPicture}
+                clickleft={clickleftPicture}
             />
+
+
 
 
             <section className='Card-logement ' key={IdFicheLogement}>
@@ -59,10 +86,12 @@ const FicheLogement = () => {
                         <div className="logement-tags">
 
                             <ul >
+
                                 {ProfileLogement.tags.map((tags, index) => {
                                     return <li key={tags & index}>{tags}</li>
                                 })
                                 }
+
 
                             </ul>
 
@@ -81,11 +110,9 @@ const FicheLogement = () => {
 
                         </div>
                         <div className="logement-star-rating">
-                            <li>{stars}</li>
-                            <li>{stars}</li>
-                            <li>{stars}</li>
-                            <li>{stars}</li>
-                            <li>{stars}</li>
+                            {[...ProfileLogement.rating].map(rating, starArray => {
+                                return <li key={starArray & rating}>{stars}</li>
+                            })}
                         </div>
                     </div>
                 </div>
@@ -94,7 +121,9 @@ const FicheLogement = () => {
                 <div className='description-equipement'>
 
                     <LogementPanel title="Descriptions" content={ProfileLogement.description} />
-                    <LogementPanel title="Equipements" content={ProfileLogement.equipments} />
+                    <LogementPanel title="Equipements" content={ProfileLogement.equipments.map((equipments, index) => {
+                        return <li key={equipments & index}>{equipments}</li>
+                    })} />
 
                 </div>
 

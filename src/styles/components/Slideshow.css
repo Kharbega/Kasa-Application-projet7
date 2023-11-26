@@ -28,11 +28,13 @@ div.group-slideshow>div>div>ul>img {
     height: 100%;
     border-radius: 25px;
     display: none;
+    object-fit: cover;
 
 }
 
 div.group-slideshow>div>div>ul>img.show {
     display: flex;
+    object-fit: cover;
 }
 
 .numberIndexPicture {
