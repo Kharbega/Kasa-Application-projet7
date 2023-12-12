@@ -1,8 +1,8 @@
 .Errorpage-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    text-align: center;
-
+    align-items: center;
 }
 
 
@@ -10,10 +10,9 @@
     font-family: Montserrat;
     font-size: 288px;
     font-weight: 700;
-    line-height: 411px;
     letter-spacing: 0em;
     text-align: center;
-    margin: 0;
+    margin-top: 5rem;
 
 
 }
@@ -27,16 +26,97 @@
 
 
 
-;
 
-h3.Text-H3 {
+
+.Error-Title {
+
     font-family: Montserrat;
     font-size: 36px;
     font-weight: 500;
-    line-height: 51px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-bottom: 100px;
+    margin-bottom: 5rem;
+    text-align: center;
 
 
+
+}
+
+div>div.Errorpage-content>a>h4 {
+
+    color: #FF6060;
+    border-bottom: solid;
+    padding: 0;
+
+
+}
+
+
+
+
+/*************************media queries *********************/
+
+@media only screen and (max-width: 700px) {
+
+
+    .Text-404 {
+        font-size: 200px;
+    }
+
+
+}
+
+@media only screen and (max-width: 650px) {
+
+
+    .Text-404 {
+        font-size: 150px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .Text-404 {
+        font-size: 100px;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    .Text-404 {
+        font-size: 96px;
+    }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+
+
+    .Error-Title {
+        font-size: 25px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .Error-Title {
+        font-size: 18px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    div>div.Errorpage-content>a>h4 {
+        font-size: 14px;
+    }
 }

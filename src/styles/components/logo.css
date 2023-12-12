@@ -1,11 +1,27 @@
-.logo {
-    width: 210.32px;
-    height: 68px;
-    top: 40px;
-    left: 100px;
+.logo>img {
+    height: 50px;
+
+    /* width: 210.32px;
+    height: 68px;*/
 }
 
 .logo-nav {
     padding-bottom: 5%;
+
+}
+
+div.Home-content>div.logo-nav>div.logo>img {
+
+    height: 50px;
+
+}
+
+/*********************media queries*******************/
+
+@media only screen and (max-width: 650px) {
+
+    .navigation {
+        width: 100%;
+    }
 
 }

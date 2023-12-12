@@ -3,7 +3,7 @@ ul {
 }
 
 a {
-    padding-right: 60px;
+    padding-right: 1rem;
     text-decoration: none;
     color: #FF6060;
 
@@ -12,4 +12,12 @@ a {
 
 li {
     list-style: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .navigation>ul {
+        padding-left: 14%;
+    }
 }

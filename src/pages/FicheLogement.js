@@ -5,20 +5,20 @@ import LogementPanel from '../components/LogementPanel';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { useSearchParams } from 'react-router-dom'; import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Slideshow from '../components/Slideshow';
+import Star from '../components/Star';
 
 const stars = [<FontAwesomeIcon icon={faStar} size="xl" />]
-const NumberRating = parseInt(ProfileLogement.rating)
-const starArray = [1, 2, 3, 3, 4, 5]
+//const NumberRating = (ProfileLogement.rating)
+
 console.log(stars)
 
 
 const FicheLogement = () => {
 
 
-    //   const [] = useState(logements);
+    const [] = useState(logements);
 
     const [urlSearch] = useSearchParams()
     const [IdFicheLogement] = useState(urlSearch.get('_id'))
@@ -109,9 +109,14 @@ const FicheLogement = () => {
                             </span>
 
                         </div>
+                        {/*  <Star
+                            initialValue={parseInt(ProfileLogement.rating)} /> */}
                         <div className="logement-star-rating">
-                            {[...ProfileLogement.rating].map(rating, starArray => {
-                                return <li key={starArray & rating}>{stars}</li>
+                            {[1, 2, 3, 4, 5].map((number) => {
+
+                                return (<li className={parseInt(ProfileLogement.rating) >= number ? "active" : "noActive"}>{stars}</li>)
+
+
                             })}
                         </div>
                     </div>
@@ -129,7 +134,6 @@ const FicheLogement = () => {
 
             </section><Footer /></>
     )
-
 
 };
 

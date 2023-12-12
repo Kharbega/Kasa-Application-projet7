@@ -112,9 +112,8 @@ p.name {
 
 .description-equipement {
     display: flex;
-    justify-content: space-around;
     padding-bottom: 2%;
-
+    gap: 3rem;
 
 }
 
@@ -146,5 +145,47 @@ p.name {
 .logement-star-rating {
     display: flex;
     justify-content: space-between;
+
+}
+
+li.active {
+    color: rgb(255, 96, 96);
+    cursor: pointer;
+}
+
+li.noActive {
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+
+
+/********************Media queries *****************/
+
+@media only screen and (max-width: 650px) {
+
+
+    #root>section>div.group-main>div.location-tag>div.logement-tags>ul {
+        flex-wrap: wrap;
+    }
+
+    .group-main {
+        flex-wrap: wrap;
+    }
+
+    .host-star {
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .description-equipement {
+        flex-direction: column
+    }
+
+
+
+
 
 }

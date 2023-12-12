@@ -24,7 +24,7 @@ const LogementPanel = (props) => {
 
 
     return (
-        <div className="logement-panel-about">
+        <div className="logement-panel-about panel-ficheLogement">
             <div className='group-title-chevron' onClick={ReverseContentTitle}>
                 <h4>{props.title}</h4>
                 <span className="elementChevronUp">{CollapseChevron}</span>
