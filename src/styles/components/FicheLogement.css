@@ -49,7 +49,7 @@ p.name {
     justify-content: center;
 }
 
-#root>section>div.group-main>div.location-tag>div.logement-tags>ul>li {
+section>div.group-main>div.location-tag>div.logement-tags>ul>li {
     border-radius: 10px;
     background-color: #ff6060;
     color: #fff;
@@ -65,7 +65,7 @@ p.name {
 
 }
 
-#root>section>div.group-main>div.location-tag>div.logement-tags>ul {
+section>div.group-main>div.location-tag>div.logement-tags>ul {
     padding-inline: 0px;
     display: flex;
 }
@@ -92,7 +92,7 @@ p.name {
     margin: 0;
 }
 
-#root>section>div.description-equipement>div.logement-description>p {
+section>div.description-equipement>div.logement-description>p {
     display: block;
     font-size: 18px;
     font-weight: 400;
@@ -105,7 +105,7 @@ p.name {
 
 }
 
-#root>section>div.description-equipement>div.logement-equipement>ul {
+section>div.description-equipement>div.logement-equipement>ul {
     display: flex;
     flex-direction: column;
 }
@@ -167,7 +167,7 @@ li.noActive {
         border-bottom: 1px solid;
     }
 
-    #root>section>div.group-main>div.location-tag>div.logement-tags>ul {
+    section>div.group-main>div.location-tag>div.logement-tags>ul {
         flex-wrap: wrap;
     }
 
@@ -185,9 +185,6 @@ li.noActive {
     .description-equipement {
         flex-direction: column
     }
-
-
-
 
 
 }

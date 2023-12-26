@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import logements from '../Data/logements.json';
 const elementChevronUp = <FontAwesomeIcon icon={faChevronUp} />
 const elementChevronDown = <FontAwesomeIcon icon={faChevronDown} />
 
@@ -10,17 +9,11 @@ import "../styles/components/LogementPanel.css"
 
 const LogementPanel = (props) => {
 
-
     const [CollapseOpen, SetCollapseOpen] = useState(false)
 
     /* Si le <p> est visible alors on affiche le chevron Up sinon on affiche le chevronDown */
     const CollapseChevron = (CollapseOpen ? elementChevronUp : elementChevronDown)
     const ReverseContentTitle = () => { SetCollapseOpen(!CollapseOpen) }
-
-    /*  */
-    // const [CurrentLogement] = useState(logements);
-
-
 
 
     return (

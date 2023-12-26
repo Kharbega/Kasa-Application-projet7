@@ -11,7 +11,6 @@ const Error = () => {
             <div className="logo-nav">
                 <Navigation />
 
-
                 <Logo />
             </div>
             <div className="Errorpage-content">

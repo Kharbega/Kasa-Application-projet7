@@ -14,39 +14,33 @@ const stars = [<FontAwesomeIcon icon={faStar} size="xl" />]
 
 
 const FicheLogement = () => {
-
-    const [] = useState(logements);
-
+    /* Recherche de l'id de chaque logement */
     const [urlSearch] = useSearchParams()
     const [IdFicheLogement] = useState(urlSearch.get('_id'))
 
     let ProfileLogement = logements.find(item => item.id === IdFicheLogement);
-
+    /* Si id introuvable , on dirige vers la page erreur **/
     if (ProfileLogement === undefined) return (<Error />);
 
     const [CurrentPicture, setCurrentPicture] = useState(0)
     const TotalLengthPicture = ProfileLogement.pictures.length - 1;
     const NumberPicture = CurrentPicture - 1;
-    const IndexArrayPicture = `${ProfileLogement.pictures.length}`
-    //const [IndexArrayPicture, setIndexArrayPicture] = useState(0)
-    const ShowPicture = (index) => { if (index === CurrentPicture) return "show" }
+
+    /* fonction pour gerer le nombre de photo, gerer le deroulement des photos */
+    const ShowPicture = (index) => { if (index === CurrentPicture) return "show" };
     const clickleftPicture = () => {
         if (NumberPicture < 0) { setCurrentPicture(TotalLengthPicture) }
         else {
             setCurrentPicture(CurrentPicture - 1)
         }
 
-    }
+    };
 
     const clickrighttPicture = () => {
-        // if (NumberPicture > TotalLengthPicture) { setCurrentPicture(0) }
-        // else {
         setCurrentPicture((CurrentPicture + 1) % ProfileLogement.pictures.length)
-    }
+    };
 
 
-    //}
-    //quand on clique sur le btn left , img suivant 
 
     return (
 
@@ -59,13 +53,9 @@ const FicheLogement = () => {
 
 
             <Slideshow
-
                 picture=
-
-
                 {ProfileLogement.pictures.map((pictures, index) => {
                     return <img key={pictures & index} src={pictures} className={ShowPicture(index)} />
-
                 })
                 }
                 number={`${CurrentPicture + 1}/${ProfileLogement.pictures.length}`}
@@ -73,9 +63,6 @@ const FicheLogement = () => {
                 clickright={clickrighttPicture}
                 clickleft={clickleftPicture}
             />
-
-
-
 
             <section className='Card-logement ' key={IdFicheLogement}>
                 <div className='group-main'>
@@ -89,15 +76,12 @@ const FicheLogement = () => {
                         <div className="logement-tags">
 
                             <ul >
-
                                 {ProfileLogement.tags.map((tags, index) => {
                                     return <li key={tags & index}>{tags}</li>
                                 })
                                 }
 
-
                             </ul>
-
 
                         </div>
                     </div>
@@ -112,13 +96,10 @@ const FicheLogement = () => {
                             </span>
 
                         </div>
-                        {/*  <Star
-                            initialValue={parseInt(ProfileLogement.rating)} /> */}
                         <div className="logement-star-rating">
                             {[1, 2, 3, 4, 5].map((numberArray) => {
 
                                 return (<li className={parseInt(ProfileLogement.rating) >= numberArray ? "active" : "noActive"}>{stars}</li>)
-
 
                             })}
                         </div>

@@ -1,8 +1,6 @@
 .logo>img {
     height: 50px;
 
-    /* width: 210.32px;
-    height: 68px;*/
 }
 
 .logo-nav {
@@ -51,8 +49,4 @@ div.Home-content>div.logo-nav>div.logo>img {
         height: 43px;
     }
 
-    /* .navigation>ul {
-
-        padding-left: auto;
-    }*/
 }

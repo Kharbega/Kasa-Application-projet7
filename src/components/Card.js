@@ -12,10 +12,6 @@ const Card = () => {
             {logements.map((logement) => {
                 const { id, cover, title } = logement;
 
-                const [CurrentLogement] = useState(logement);
-
-
-
                 return (
 
                     < div className="card-models" key={id} >
@@ -29,7 +25,6 @@ const Card = () => {
                 )
 
             })}
-
 
         </div >
 
