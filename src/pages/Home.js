@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 import Footer from './Footer';
+import IMG from '../assets/fonts/img/IMG.png'
 
 
 
@@ -16,8 +17,13 @@ const Home = () => {
                 <Logo />
             </div>
 
-            <Banner title="Chez vous, partout et ailleurs"
-                img="public/IMG.png" />
+            <Banner
+
+                title="Chez vous, partout et ailleurs"
+
+                img={IMG}
+
+            />
         </div><Card /></><Footer /></>
 
 

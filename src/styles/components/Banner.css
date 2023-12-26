@@ -10,32 +10,35 @@
 
 }
 
-.group-img-text {
-    height: 223px;
+/*.group-img-text {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 
 
+}*/
+
+.img-banner.banner-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
 }
 
-.img-banner-background {
-    background-image: url(/src/assets/fonts/img/IMG.png);
-    background-position: center;
+.img-banner.banner-home>img,
+div.Home-content>div.img-banner.banner-home>img {
+    object-fit: cover;
+    object-position: center;
     border-radius: 25px;
-    height: 100%;
-    width: 100%;
-    filter: brightness(0.8);
-
-}
-
-.img-banner-background.banner-home {
     filter: brightness(0.7);
+    width: 1240px;
+    height: 223px;
 }
 
 
-@media only screen and (max-width: 720px) {
+/*@media only screen and (max-width: 720px) {
 
     .Text-banner {
         font-size: 40px;
@@ -46,27 +49,66 @@
     }
 
 
-}
+}*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 696px) {
+    div.Home-content>div.img-banner.banner-home>h1 {
 
-    .group-img-text {
-        height: 111px;
+
+        width: 65%;
+        line-height: 100%;
+        font-size: 24px;
+        left: 12%;
+        margin: 0;
     }
 
-}
+    div.Home-content>div.img-banner.banner-home> {
 
-@media only screen and (max-width: 650px) {
+        height: auto;
+    }
 
-    .Text-banner {
-        font-size: 30px;
+    div.Home-content>div.img-banner.banner-home>img {
+
+        height: 150px;
+        width: 335px;
+        border-radius: 10px;
+
     }
 }
 
-@media only screen and (max-width: 600px) {
 
-    .Text-banner {
-        font-size: 25px;
-        padding-left: ;
+@media only screen and (min-width:768px) {
+    div.Home-content>div.img-banner.banner-home>img {
+
+        width: 700px;
+        height: 223px;
+        font-size: 38px;
+    }
+
+    div.Home-content>div.img-banner.banner-home {
+        padding-bottom: 4%;
+    }
+
+    div.Home-content>div.img-banner.banner-home>h1 {
+
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    div.Home-content>div.img-banner.banner-home>img {
+
+        width: 1240px;
+        height: 223px;
+        border-radius: 25px;
+    }
+
+    div.Home-content>div.img-banner.banner-home {
+        padding-bottom: 4%;
+    }
+
+    div.Home-content>div.img-banner.banner-home>h1 {
+
+        font-size: 40px;
     }
 }

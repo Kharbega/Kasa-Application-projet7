@@ -2,11 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
+import Footer from './Footer';
 
 
 const Error = () => {
     return (
-        <div className='ErrorPage'>
+        <><div className='ErrorPage'>
             <div className="logo-nav">
                 <Navigation />
 
@@ -19,11 +20,11 @@ const Error = () => {
                 <h3 className='Error-Title'>Oups! La page que
                     vous demandez n'existe pas.</h3>
 
-                <NavLink to="/" >
+                <NavLink to="/">
                     <h4>Retourner sur la page d'accueil</h4>
                 </NavLink>
             </div>
-        </div>
+        </div><Footer /></>
     );
 };
 

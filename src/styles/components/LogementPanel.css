@@ -2,8 +2,8 @@
     width: 100%;
     border-radius: 10px;
     background-color: #F6F6F6;
-    padding-top: 2rem;
-
+    padding: 0;
+    margin-bottom: 1rem;
 
 
 }
@@ -26,6 +26,16 @@
     background-color: #ff6060;
     border-radius: 10px;
     cursor: pointer;
+
+}
+
+div.group-panel-about>div>p {
+    margin-left: 4%;
+
+}
+
+div.description-equipement>div>p {
+    margin-left: 1rem;
 
 }
 

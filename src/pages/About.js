@@ -5,6 +5,8 @@ import LogementPanel from '../components/LogementPanel';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 import Banner from '../components/Banner';
+import imgabout from '../assets/fonts/img/banner-about.png'
+import Footer from './Footer';
 const elementChevronUp = <FontAwesomeIcon icon={faChevronUp} />
 
 const fiabilité = "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
@@ -21,7 +23,7 @@ const About = () => {
             <Navigation />
             <Logo />
         </div>
-            <Banner />
+            <Banner img={imgabout} />
 
             <div className='group-panel-about'>
                 <LogementPanel title="Fiabilité" content={fiabilité} />
@@ -29,7 +31,10 @@ const About = () => {
                 <LogementPanel title="Services" content={services} />
                 <LogementPanel title="Sécurité" content={sécurité} />
 
-            </div></>
+            </div>
+            <Footer />
+        </>
+
     );
 };
 

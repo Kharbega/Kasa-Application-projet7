@@ -163,7 +163,9 @@ li.noActive {
 /********************Media queries *****************/
 
 @media only screen and (max-width: 650px) {
-
+    div.logo-nav.LogoFicheLogement>div.navigation>ul>a:nth-child(1)>li {
+        border-bottom: 1px solid;
+    }
 
     #root>section>div.group-main>div.location-tag>div.logement-tags>ul {
         flex-wrap: wrap;

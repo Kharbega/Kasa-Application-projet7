@@ -44,7 +44,14 @@ div.group-slideshow>div>div>ul>img.show {
     color: white;
 }
 
+div.picture-slideshow-one-picture>ul>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
 
+    object-fit: cover;
+
+}
 
 
 
@@ -60,6 +67,11 @@ div.group-slideshow>div>div>ul>img.show {
 @media only screen and (max-width: 600px) {
     .Chevron {
         font-size: 4rem;
+    }
+
+    .numberIndexPicture {
+        display: none;
+
     }
 }
 

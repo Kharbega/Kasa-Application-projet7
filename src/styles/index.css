@@ -11,6 +11,7 @@
 @import "../styles/components/About.css";
 @import "../styles/components/LogementPanel.css";
 @import "../styles/components/Slideshow.css";
+@import "../styles/components/Home.css";
 
 
 
@@ -24,11 +25,15 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #FF6060;
 
-  height: 1024px;
-  top: -183px;
-  left: -543px;
-  padding: 40px, 100px, 0px, 100px;
+  padding: 4%;
+  margin: 0;
 
 }
 
-;
+@media only screen and (min-width:1024px) {
+  body {
+    width: 1240px;
+
+  }
+
+}

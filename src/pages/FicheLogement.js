@@ -7,30 +7,28 @@ import Navigation from '../components/Navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSearchParams } from 'react-router-dom'; import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Slideshow from '../components/Slideshow';
-import Star from '../components/Star';
+import Error from '../pages/Error';
 
 const stars = [<FontAwesomeIcon icon={faStar} size="xl" />]
-//const NumberRating = (ProfileLogement.rating)
 
-console.log(stars)
 
 
 const FicheLogement = () => {
-
 
     const [] = useState(logements);
 
     const [urlSearch] = useSearchParams()
     const [IdFicheLogement] = useState(urlSearch.get('_id'))
-    console.log(IdFicheLogement);
 
     let ProfileLogement = logements.find(item => item.id === IdFicheLogement);
+
+    if (ProfileLogement === undefined) return (<Error />);
 
     const [CurrentPicture, setCurrentPicture] = useState(0)
     const TotalLengthPicture = ProfileLogement.pictures.length - 1;
     const NumberPicture = CurrentPicture - 1;
-
-
+    const IndexArrayPicture = `${ProfileLogement.pictures.length}`
+    //const [IndexArrayPicture, setIndexArrayPicture] = useState(0)
     const ShowPicture = (index) => { if (index === CurrentPicture) return "show" }
     const clickleftPicture = () => {
         if (NumberPicture < 0) { setCurrentPicture(TotalLengthPicture) }
@@ -59,7 +57,11 @@ const FicheLogement = () => {
                 <Logo />
             </div>
 
-            <Slideshow picture=
+
+            <Slideshow
+
+                picture=
+
 
                 {ProfileLogement.pictures.map((pictures, index) => {
                     return <img key={pictures & index} src={pictures} className={ShowPicture(index)} />
@@ -67,6 +69,7 @@ const FicheLogement = () => {
                 })
                 }
                 number={`${CurrentPicture + 1}/${ProfileLogement.pictures.length}`}
+
                 clickright={clickrighttPicture}
                 clickleft={clickleftPicture}
             />
@@ -112,9 +115,9 @@ const FicheLogement = () => {
                         {/*  <Star
                             initialValue={parseInt(ProfileLogement.rating)} /> */}
                         <div className="logement-star-rating">
-                            {[1, 2, 3, 4, 5].map((number) => {
+                            {[1, 2, 3, 4, 5].map((numberArray) => {
 
-                                return (<li className={parseInt(ProfileLogement.rating) >= number ? "active" : "noActive"}>{stars}</li>)
+                                return (<li className={parseInt(ProfileLogement.rating) >= numberArray ? "active" : "noActive"}>{stars}</li>)
 
 
                             })}

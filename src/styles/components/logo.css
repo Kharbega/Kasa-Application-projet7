@@ -16,12 +16,43 @@ div.Home-content>div.logo-nav>div.logo>img {
 
 }
 
+
+
 /*********************media queries*******************/
 
-@media only screen and (max-width: 650px) {
 
-    .navigation {
-        width: 100%;
+@media only screen and (min-width:1024px) {
+    .logo-nav {
+        padding-left: 0%;
+    }
+}
+
+
+@media only screen and (max-width: 696px) {
+
+    .navigation>ul {
+        text-transform: uppercase;
+        font-size: 14px;
+
+
+
     }
 
+    .Home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    div.Home-content>div.logo-nav>div.logo>img,
+    div.logo>img {
+        height: 43px;
+    }
+
+    /* .navigation>ul {
+
+        padding-left: auto;
+    }*/
 }

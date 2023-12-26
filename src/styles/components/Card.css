@@ -61,8 +61,14 @@ div.card-content>div>a>h4 {
 
 }
 
-.Home-content {
-    padding-bottom: 5%;
+/*.Home-content {
+   padding-bottom: 5%;
+}*/
+
+@media only screen and (max-width: 768px) {
+    .card-content {
+        background-color: white;
+    }
 }
 
 @media only screen and (max-width: 650px) {

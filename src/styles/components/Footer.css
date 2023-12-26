@@ -18,12 +18,19 @@
 
 }
 
-#root>div.footer-content>div.logo>img {
+div.footer-content>div.logo-footer>img {
     width: 122px;
     height: 39.44px;
-    top: 66px;
-    left: 659px;
     position: relative;
 
     color: white;
+}
+
+@media only screen and (max-width: 650px) {
+    div.text-content-footer>p {
+        font-size: 12px;
+        line-height: 17px;
+        text-align: center;
+
+    }
 }
