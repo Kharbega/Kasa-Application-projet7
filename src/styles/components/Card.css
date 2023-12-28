@@ -8,6 +8,8 @@
 
 }
 
+
+
 .card-models {
     width: 340px;
     height: 226px;
@@ -63,6 +65,14 @@ div.card-content>div>a {
 
 
 }
+
+div.card-content>div>a :hover {
+    filter: none;
+}
+
+
+
+
 
 
 

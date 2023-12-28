@@ -45,7 +45,7 @@ div.description-equipement>div>p {
     padding-right: 3%;
 }
 
-#root>div>div:nth-child>p {
+div>div:nth-child>p {
     border-radius: 10px;
 
 }
