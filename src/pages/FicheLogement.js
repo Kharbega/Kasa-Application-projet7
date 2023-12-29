@@ -4,12 +4,10 @@ import Footer from './Footer';
 import LogementPanel from '../components/LogementPanel';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useSearchParams } from 'react-router-dom'; import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { useSearchParams } from 'react-router-dom';
 import Slideshow from '../components/Slideshow';
 import Error from '../pages/Error';
-
-const stars = [<FontAwesomeIcon icon={faStar} size="xl" />]
+import Rate from '../components/Rate';
 
 
 
@@ -45,7 +43,7 @@ const FicheLogement = () => {
     return (
 
 
-        <>
+        <><div className='ficheOneLogement' key={IdFicheLogement}>
             <div className="logo-nav LogoFicheLogement">
                 <Navigation />
                 <Logo />
@@ -53,33 +51,29 @@ const FicheLogement = () => {
 
 
             <Slideshow
-                picture=
-                {ProfileLogement.pictures.map((pictures, index) => {
-                    return <img key={pictures & index} src={pictures} className={ShowPicture(index)} />
-                })
-                }
+                picture={ProfileLogement.pictures.map((pictures, indexpicture) => {
+                    return <img key={indexpicture} src={pictures} className={ShowPicture(indexpicture)} />;
+                })}
                 number={`${CurrentPicture + 1}/${ProfileLogement.pictures.length}`}
 
                 clickright={clickrighttPicture}
-                clickleft={clickleftPicture}
-            />
+                clickleft={clickleftPicture} />
 
-            <section className='Card-logement ' key={IdFicheLogement}>
+            <section className='Card-logement '>
                 <div className='group-main'>
                     <div className="location-tag">
                         <div className="logement-title">
-                            <h1 >{ProfileLogement.title} </h1>
+                            <h1>{ProfileLogement.title} </h1>
                         </div>
                         <div className="logement-location">
                             <p>{ProfileLogement.location}</p>
                         </div>
                         <div className="logement-tags">
 
-                            <ul >
-                                {ProfileLogement.tags.map((tags, index) => {
-                                    return <li key={tags & index}>{tags}</li>
-                                })
-                                }
+                            <ul>
+                                {ProfileLogement.tags.map((tags, indextag) => {
+                                    return <li key={indextag}>{tags}</li>;
+                                })}
 
                             </ul>
 
@@ -97,12 +91,10 @@ const FicheLogement = () => {
 
                         </div>
                         <div className="logement-star-rating">
-                            {[1, 2, 3, 4, 5].map((numberArray) => {
-
-                                return (<li className={parseInt(ProfileLogement.rating) >= numberArray ? "active" : "noActive"}>{stars}</li>)
-
-                            })}
+                            <Rate numberofRate={ProfileLogement.rating}
+                            />
                         </div>
+
                     </div>
                 </div>
 
@@ -110,13 +102,13 @@ const FicheLogement = () => {
                 <div className='description-equipement'>
 
                     <LogementPanel title="Descriptions" content={ProfileLogement.description} />
-                    <LogementPanel title="Equipements" content={ProfileLogement.equipments.map((equipments, index) => {
-                        return <li key={equipments & index}>{equipments}</li>
+                    <LogementPanel title="Equipements" content={ProfileLogement.equipments.map((equipments, indexeq) => {
+                        return <li key={indexeq}>{equipments}</li>;
                     })} />
 
                 </div>
 
-            </section><Footer /></>
+            </section></div><Footer /></>
     )
 
 };

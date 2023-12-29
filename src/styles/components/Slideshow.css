@@ -9,17 +9,19 @@
     position: absolute;
     color: white;
     cursor: pointer;
-    top: 40%;
+    top: 37%;
     font-size: 6rem;
+    left: 86%;
 }
 
 .Chevron.left {
-    left: 30px;
+    left: 3%;
+    rotate: 180deg;
 }
 
 .Chevron.right {
-
-    right: 5px;
+    rotate: 180deg;
+    left: 91%;
 }
 
 div.group-slideshow>div>div>ul>img {
@@ -58,15 +60,27 @@ div.picture-slideshow-one-picture>ul>img {
 
 /***********Media queries********************/
 
+@media only screen and (max-width: 768px) {
+    .Chevron {
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .Chevron {
+        height: 60px;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     .Chevron {
-        font-size: 5rem;
+        height: 50px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .Chevron {
-        font-size: 4rem;
+        height: 40px;
     }
 
     .numberIndexPicture {
@@ -77,6 +91,7 @@ div.picture-slideshow-one-picture>ul>img {
 
 @media only screen and (max-width: 550px) {
     .Chevron {
-        font-size: 3rem;
+        height: 30px;
+        top: 45%;
     }
 }

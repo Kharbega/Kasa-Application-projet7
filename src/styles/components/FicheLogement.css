@@ -114,7 +114,7 @@ section>div.description-equipement>div.logement-equipement>ul {
     display: flex;
     padding-bottom: 2%;
     gap: 3rem;
-
+    align-items: flex-start;
 }
 
 .logement-description {
@@ -142,21 +142,11 @@ section>div.description-equipement>div.logement-equipement>ul {
 
 }
 
-.logement-star-rating {
-    display: flex;
-    justify-content: space-between;
 
-}
 
-li.active {
-    color: rgb(255, 96, 96);
-    cursor: pointer;
-}
 
-li.noActive {
-    color: rgb(204, 204, 204);
-    cursor: pointer;
-}
+
+
 
 
 

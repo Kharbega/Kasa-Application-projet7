@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+//import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import logements from '../Data/logements.json';
-import { useSearchParams } from 'react-router-dom'; import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { useSearchParams } from 'react-router-dom';
+//import { faStar } from '@fortawesome/free-solid-svg-icons';
+import elementChevronRight from '../assets/fonts/img/vectorLeft.png'
+import elementChevronLeft from '../assets/fonts/img/vectorRight.png'
 
 
 function Slideshow(props) {
+
     const [CurrentPicture, setCurrentPicture] = useState(0);
 
     const [urlSearch] = useSearchParams()
@@ -28,7 +31,7 @@ function Slideshow(props) {
 
 
             <div className='group-slideshow'>
-                <FontAwesomeIcon icon={faChevronUp} rotation={270} className='Chevron left' onClick={props.clickleft} onChange={props.changeleft} />
+                <img src={elementChevronLeft} className='Chevron left' onClick={props.clickleft} onChange={props.changeleft} />
                 <div>
 
                     <div className="picture-slideshow">
@@ -39,7 +42,7 @@ function Slideshow(props) {
                     </div>
 
                 </div>
-                <FontAwesomeIcon icon={faChevronUp} rotation={90} className='Chevron right' onClick={props.clickright} />
+                <img src={elementChevronRight} className='Chevron right' onClick={props.clickright} />
 
             </div>
         )

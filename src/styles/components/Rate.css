@@ -1,0 +1,9 @@
+.rate-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+img.starinactive {
+    margin-left: 3%;
+}
