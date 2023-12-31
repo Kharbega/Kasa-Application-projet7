@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-//import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import logements from '../Data/logements.json';
 import { useSearchParams } from 'react-router-dom';
-//import { faStar } from '@fortawesome/free-solid-svg-icons';
 import elementChevronRight from '../assets/fonts/img/vectorLeft.png'
 import elementChevronLeft from '../assets/fonts/img/vectorRight.png'
 
