@@ -113,7 +113,7 @@ section>div.description-equipement>div.logement-equipement>ul {
 .description-equipement {
     display: flex;
     padding-bottom: 2%;
-    gap: 3rem;
+    gap: 1rem;
     align-items: flex-start;
 }
 
