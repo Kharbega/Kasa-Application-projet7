@@ -4,15 +4,22 @@
 @import "../styles/components/Banner.css";
 @import "../styles/components/Navigation.css";
 @import "../styles/components/Card.css";
-@import "../styles/components/Footer.css"
-
-;
+@import "../styles/components/Footer.css";
 @import "../styles/components/FicheLogement.css";
 @import "../styles/components/About.css";
 @import "../styles/components/LogementPanel.css";
 @import "../styles/components/Slideshow.css";
 @import "../styles/components/Home.css";
 @import "../styles/components/Rate.css";
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: local("Montserrat"),
+    url(" https://fonts.googleapis.com/css2");
+
+}
+
+
 
 
 
@@ -22,6 +29,7 @@ body {
   color: #FF6060;
   padding: 4%;
   margin: auto;
+
 
 }
 
